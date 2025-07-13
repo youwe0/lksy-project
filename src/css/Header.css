@@ -1,0 +1,59 @@
+/* App.css or Header.css */
+
+.header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: #eab6b6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header li a:hover {
+  color: #0077ff;
+}
+
+/* Push main content below the fixed header */
+main {
+  padding-top: 80px;
+  /* adjust according to header height */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .header nav {
+    justify-content: flex-start;
+  }
+
+  .header ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+}
